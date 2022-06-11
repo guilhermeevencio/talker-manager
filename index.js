@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const talkerManagerRoutes = require('./routes/talkerManager.routes');
 
 const app = express();
 app.use(bodyParser.json());
+app.use('/', talkerManagerRoutes);
 
 const HTTP_OK_STATUS = 200;
 const PORT = '3000';
