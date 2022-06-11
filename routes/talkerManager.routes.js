@@ -7,6 +7,6 @@ const talkerManagerRoutes = Router();
 
 talkerManagerRoutes.get('/talker', (req, res) => listTalkerController(req, res));
 talkerManagerRoutes.get('/talker/:id', (req, res) => getTalkerByIdController(req, res));
-talkerManagerRoutes.post('/login', (req, res) => loginController(req, res));
+talkerManagerRoutes.post('/login', (req, res, next) => loginController(req, res, next));
 
 module.exports = talkerManagerRoutes;

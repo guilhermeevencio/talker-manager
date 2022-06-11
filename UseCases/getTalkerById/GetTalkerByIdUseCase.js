@@ -1,7 +1,6 @@
 const fs = require('fs');
 
 function getTalkerByIdUseCase(id) {
-  console.log(id);
   try {
     const data = JSON.parse(fs.readFileSync('talker.json', 'utf-8'));
     const selectedTalker = data.find((talker) => Number(talker.id) === Number(id));
