@@ -1,4 +1,3 @@
-const e = require("express");
 const listTalkersUseCase = require("./ListTalkersUseCase");
 
 function ListTalkerController (_req, res) {
