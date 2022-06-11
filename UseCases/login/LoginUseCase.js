@@ -1,11 +1,7 @@
-function loginUseCase(_email, _password) {
-  try {
-  const randomToken = Math.random().toString(15).substring(2, 10)
-    + Math.random().toString(15).substring(2, 10);
-  return randomToken;
-  } catch (error) {
-    return error.message;
-  }
+const crypto = require('crypto');
+
+function loginUseCase() {
+  return crypto.randomBytes(8).toString('hex');
 }
 
-module.exports = loginUseCase;
+module.exports = { loginUseCase };
