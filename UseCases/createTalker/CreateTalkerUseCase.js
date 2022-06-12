@@ -1,7 +1,7 @@
 const fs = require('fs');
 const validateAge = require('../../helpers/validateAge');
 const validateName = require('../../helpers/validateName');
-const validateTalk = require('../../helpers/validateTalk');
+const { validateTalk, validateRate, validateDate } = require('../../helpers/validateTalk');
 const validateToken = require('../../helpers/validateToken');
 
 function createTalkerUseCase(req, res, next) {
@@ -11,6 +11,8 @@ function createTalkerUseCase(req, res, next) {
   validateName(req, res, next);
   validateAge(req, res);
   validateTalk(req, res, next);
+  validateDate(req, res);
+  validateRate(req, res);
   const talker = {
     name,
     age,
