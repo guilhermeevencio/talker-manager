@@ -1,7 +1,5 @@
 const editTalkerUseCase = require('./EditTalkerUseCase');
 
-// tentar fazer todas as rotas aqui
-
 function editTalkerController(req, res, next) {
   try {
     const editedTalker = editTalkerUseCase(req, res, next);
